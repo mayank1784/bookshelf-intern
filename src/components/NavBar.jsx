@@ -6,6 +6,7 @@ const Navbar = () => {
     <nav className="p-4 bg-gray-800 text-white flex justify-between">
       <Link to="/">Book Search</Link>
       <Link to="/bookshelf">My Bookshelf</Link>
+      <Link to='/productListing'>Product Listing</Link>
     </nav>
   );
 };

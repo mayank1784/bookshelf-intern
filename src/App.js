@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/NavBar';
 import BookSearch from './pages/BookSearch';
 import MyBookshelf from './pages/MyBookShelf';
+import ProductListing from './pages/ProductListing'
 
 const App = () => {
   const [bookshelf, setBookshelf] = useState(JSON.parse(localStorage.getItem('bookshelf')) || []);
@@ -31,6 +32,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<BookSearch addToBookshelf={addToBookshelf} bookshelf={bookshelf} />} />
         <Route path="/bookshelf" element={<MyBookshelf bookshelf={bookshelf} removeFromBookshelf={removeFromBookshelf} clearBookshelf={clearBookshelf} />} />
+      <Route path='/productListing' element={< ProductListing />} />
       </Routes>
     </Router>
   );
